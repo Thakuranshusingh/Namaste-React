@@ -1,0 +1,29 @@
+{
+  "name": "namaste-react-web-series",
+  "version": "1.0.0",
+  "description": "This is Namaste React ",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://https://github.com/Thakuranshusingh/Namaste-React.git"
+  },
+  "keywords": [
+    "React"
+  ],
+  "author": "Anshu Singh",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.9.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "browsersList" :[
+      "last 2 versions"
+    ]
+
+}
