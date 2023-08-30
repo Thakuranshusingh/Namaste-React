@@ -20,3 +20,11 @@
 - Https
 - Tree shaking 'remove unused codes'
 - Different prod and dev build
+
+# Babel
+
+- Babel is a js compiler and also a transpiler
+- React.createElement => Js object => HTML
+- Jsx => React.createElement => Js object => HTML
+- Jsx => Transpiled => Js
+- Transpiled means coverting the code which browser understands.
