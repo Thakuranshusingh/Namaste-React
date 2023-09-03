@@ -72,3 +72,6 @@
 .filter {
   display: flex;
 }
+.item {
+  display: flex;
+}
