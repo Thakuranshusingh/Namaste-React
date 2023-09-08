@@ -17,6 +17,7 @@ class About extends React.Component {
       <div>
         <h3>About us</h3>
         <h3>This is React Web series!</h3>
+        <User />
         <UserC />
       </div>
     );
