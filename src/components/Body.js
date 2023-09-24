@@ -45,6 +45,7 @@ const Body = () => {
         <div className="m-4 p-4">
           <input
             type="text"
+            data-testid="searchInput"
             className="border border-solid border-black"
             value={searchText}
             onChange={(e) => {
@@ -54,10 +55,10 @@ const Body = () => {
           <button
             className="px-4 py-2 bg-green-200 m-4 rounded-md"
             onClick={() => {
-              const filteredRestaurats = listOfRestaurant.filter((res) =>
+              const filteredRestaurant = listOfRestaurant.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
               );
-              setFilteredRestaurant(filteredRestaurats);
+              setFilteredRestaurant(filteredRestaurant);
             }}
           >
             Search
@@ -68,10 +69,10 @@ const Body = () => {
             className="px-4 py-2  bg-gray-200 rounded-md"
             onClick={() => {
               const filteredList = listOfRestaurant.filter(
-                (res) => res.info.avgRating > 4
+                (res) => res.info.avgRating > 4.2
               );
-              setListOfRestaurant(filteredList);
-              console.log(filteredList);
+              setFilteredRestaurant(filteredList);
+              console.log("Clicked");
             }}
           >
             Top rated Restaurants
@@ -93,9 +94,9 @@ const Body = () => {
             to={"/restaurants/" + restaurant.info.id}
           >
             {restaurant.info.isOpen ? (
-              <RestaurantCardPromoted resData={restaurant} />
+              <RestaurantCardPromoted resData={restaurant?.info} />
             ) : (
-              <RestaurantCard resData={restaurant} />
+              <RestaurantCard resData={restaurant?.info} />
             )}
           </Link>
         ))}
